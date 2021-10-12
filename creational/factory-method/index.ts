@@ -2,6 +2,12 @@ const randomNumber = (min: number, max: number): number => {
   return Math.floor(Math.random() * max) + min;
 };
 
+enum BankType {
+  TECHCOMBANK = 0,
+  VIETCOMBANK = 1,
+  TPBank = 2,
+}
+
 interface IBank {
   getName: () => string | null;
 }
@@ -34,10 +40,10 @@ class BasicBankFactory implements IBankFactory {
   private index: number = 0;
 
   public createBank(): IBank {
-    if (this.index === 0) {
+    if (this.index === BankType.TECHCOMBANK) {
       this.index++;
       return new TechcomBank();
-    } else if (this.index === 1) {
+    } else if (this.index === BankType.VIETCOMBANK) {
       this.index++;
       return new VietcomBank();
     } else {
@@ -52,9 +58,9 @@ class RandomBankFactory {
 
   public createBank(): IBank {
     const type: number = randomNumber(0, 3);
-    if (type === 0) {
+    if (type === BankType.TECHCOMBANK) {
       return new TechcomBank();
-    } else if (type === 1) {
+    } else if (type === BankType.VIETCOMBANK) {
       return new VietcomBank();
     } else {
       return new TPBank();
