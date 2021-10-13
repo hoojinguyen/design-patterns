@@ -1,87 +1,68 @@
-const randomNumber = (min: number, max: number): number => {
-  return Math.floor(Math.random() * max) + min;
-};
-
-enum BankType {
-  TECHCOMBANK = 0,
-  VIETCOMBANK = 1,
-  TPBank = 2,
+interface ITransport {
+  deliver: () => string;
 }
 
-interface IBank {
-  getName: () => string | null;
-}
-
-interface IBankFactory {
-  createBank: () => IBank;
-}
-
-class TPBank implements IBank {
-  public getName(): string {
-    return 'TPBank';
-  }
-}
-
-class VietcomBank implements IBank {
-  public getName(): string {
-    return 'VietcomBank';
-  }
-}
-
-class TechcomBank implements IBank {
-  public getName(): string {
-    return 'TechcomBank';
-  }
-}
-
-class BasicBankFactory implements IBankFactory {
+class Truck implements ITransport {
   constructor() {}
 
-  private index: number = 0;
+  public deliver(): string {
+    return 'Delivery by land with truck';
+  }
+}
 
-  public createBank(): IBank {
-    if (this.index === BankType.TECHCOMBANK) {
-      this.index++;
-      return new TechcomBank();
-    } else if (this.index === BankType.VIETCOMBANK) {
-      this.index++;
-      return new VietcomBank();
+class MotorBike implements ITransport {
+  constructor() {}
+
+  public deliver(): string {
+    return 'Delivery by land with motorbike';
+  }
+}
+
+class Ship implements ITransport {
+  constructor() {}
+
+  public deliver(): string {
+    return 'Delivery by sea with ship';
+  }
+}
+
+interface ILogistics {
+  wheel?: number;
+  createTransport: () => ITransport;
+}
+
+class RoadLogistics implements ILogistics {
+  private _wheel: number;
+
+  constructor(wheel = 4) {
+    this._wheel = wheel;
+  }
+
+  public createTransport() {
+    if (this._wheel === 4) {
+      return new Truck();
     } else {
-      this.index = 0;
-      return new TPBank();
+      return new MotorBike();
     }
   }
 }
 
-class RandomBankFactory {
+class SeaLogistics implements ILogistics {
   constructor() {}
-
-  public createBank(): IBank {
-    const type: number = randomNumber(0, 3);
-    if (type === BankType.TECHCOMBANK) {
-      return new TechcomBank();
-    } else if (type === BankType.VIETCOMBANK) {
-      return new VietcomBank();
-    } else {
-      return new TPBank();
-    }
+  public createTransport() {
+    return new Ship();
   }
 }
 
 (() => {
-  const type: number = randomNumber(0, 101);
+  const randomNumber = (min: number, max: number): number => {
+    return Math.floor(Math.random() * max) + min;
+  };
 
-  let bank: IBankFactory;
-  if (type % 2 === 0) {
-    bank = new BasicBankFactory();
-  } else {
-    bank = new RandomBankFactory();
-  }
+  const type = randomNumber(0, 101);
+  const wheel = type % 4 === 0 ? 4 : 2;
+  const transport =
+    type % 2 === 0 ? new RoadLogistics(wheel) : new SeaLogistics();
 
-  console.log(bank.createBank().getName());
-  console.log(bank.createBank().getName());
-  console.log(bank.createBank().getName());
-  console.log(bank.createBank().getName());
-  console.log(bank.createBank().getName());
-  console.log(bank.createBank().getName());
+  console.log(transport.createTransport().deliver());
 })();
