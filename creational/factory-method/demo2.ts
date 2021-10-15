@@ -1,4 +1,4 @@
-namespace FactoryMethod {
+namespace FactoryMethodPattern {
   enum BankType {
     TECHCOMBANK = 0,
     VIETCOMBANK = 1,

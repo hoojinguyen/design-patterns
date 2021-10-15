@@ -1,4 +1,4 @@
-namespace FactoryMethod {
+namespace FactoryMethodPattern {
   interface ITransport {
     deliver: () => string;
   }
