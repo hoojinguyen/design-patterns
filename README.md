@@ -1,10 +1,13 @@
 # design-patterns
 
 <h2>🚀 Introduction</h2>
-
-```
-In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design. A design pattern isn't a finished design that can be transformed directly into code. It is a description or template for how to solve a problem that can be used in many different situations.
-```
+<p>
+  In software engineering, a design pattern is a general repeatable solution to
+  a commonly occurring problem in software design. A design pattern isn't a
+  finished design that can be transformed directly into code. It is a
+  description or template for how to solve a problem that can be used in many
+  different situations.
+</p>
 
 <h2>Types of Design Patterns</h2>
 
@@ -17,26 +20,31 @@ In software engineering, a design pattern is a general repeatable solution to a 
     >
     <ul>
       <li>
-        Factory method:
+        <b> Factory method: </b>
         <i>Creates an instance of several families of classes </i>
       </li>
       <li>
-        Abstract Factory:
+        <b> Abstract Factory: </b>
         <i>Separates object construction from its representation </i>
       </li>
-      <li>Builder: <i>Creates an instance of several derived classes </i></li>
       <li>
-        Prototype:
+        <b> Builder: </b>
+        <i>Creates an instance of several derived classes </i>
+      </li>
+      <li>
+        <b> Prototype: </b>
         <i
           >Avoid expensive acquisition and release of resources by recycling
           objects that are no longer in use
         </i>
       </li>
       <li>
-        Singleton: <i>A fully initialized instance to be copied or cloned </i>
+        <b> Singleton: </b>
+        <i>A fully initialized instance to be copied or cloned </i>
       </li>
       <li>
-        Object Pool: <i>A class of which only a single instance can exist </i>
+        <b> Object Pool: </b>
+        <i>A class of which only a single instance can exist </i>
       </li>
     </ul>
   </li>
@@ -47,22 +55,34 @@ In software engineering, a design pattern is a general repeatable solution to a 
       while keeping the structures flexible and efficient.</i
     >
     <ul>
-      <li>Adapter: <i>Match interfaces of different classes </i></li>
       <li>
-        Bridge: <i>Separates an object's interface from its implementation </i>
+        <b> Adapter: </b>
+        <i>Match interfaces of different classes </i>
       </li>
       <li>
-        Composite: <i>A tree structure of simple and composite objects </i>
-      </li>
-      <li>Decorator: <i>Add responsibilities to objects dynamically </i></li>
-      <li>
-        Facade: <i>A single class that represents an entire subsystem </i>
+        <b> Bridge: </b>
+        <i>Separates an object's interface from its implementation </i>
       </li>
       <li>
-        Flyweight: <i>A fine-grained instance used for efficient sharing </i>
+        <b> Composite: </b>
+        <i>A tree structure of simple and composite objects </i>
       </li>
-      <li>Private Class Data: <i>Restricts accessor/mutator access </i></li>
-      <li>Proxy: <i>An object representing another object </i></li>
+      <li>
+        <b> Decorator: </b>
+        <i>Add responsibilities to objects dynamically </i>
+      </li>
+      <li>
+        <b> Facade: </b
+        ><i>A single class that represents an entire subsystem </i>
+      </li>
+      <li>
+        <b> Flyweight: </b
+        ><i>A fine-grained instance used for efficient sharing </i>
+      </li>
+      <li>
+        <b> Private Class Data: </b><i>Restricts accessor/mutator access </i>
+      </li>
+      <li><b> Proxy: </b><i>An object representing another object </i></li>
     </ul>
   </li>
   <li>
@@ -73,34 +93,48 @@ In software engineering, a design pattern is a general repeatable solution to a 
     >
     <ul>
       <li>
-        Chain of responsibility :
+        <b> Chain of responsibility : </b>
         <i>A way of passing a request between a chain of objects</i>
       </li>
-      <li>Command: <i>Encapsulate a command request as an object</i></li>
       <li>
-        Interpreter: <i>A way to include language elements in a program</i>
+        <b> Command: </b><i>Encapsulate a command request as an object</i>
       </li>
       <li>
-        Iterator: <i>Sequentially access the elements of a collection </i>
+        <b> Interpreter: </b
+        ><i>A way to include language elements in a program</i>
       </li>
       <li>
-        Mediator: <i>Defines simplified communication between classes </i>
-      </li>
-      <li>Memento: <i>Capture and restore an object's internal state </i></li>
-      <li>
-        Null Object: <i>Designed to act as a default value of an object </i>
+        <b> Iterator: </b
+        ><i>Sequentially access the elements of a collection </i>
       </li>
       <li>
-        Observer: <i>A way of notifying change to a number of classes </i>
+        <b> Mediator: </b
+        ><i>Defines simplified communication between classes </i>
       </li>
-      <li>State: <i>Alter an object's behavior when its state changes </i></li>
-      <li>Strategy: <i>Encapsulates an algorithm inside a class </i></li>
       <li>
-        Template method:
+        <b> Memento: </b><i>Capture and restore an object's internal state </i>
+      </li>
+      <li>
+        <b> Null Object: </b>
+        <i>Designed to act as a default value of an object </i>
+      </li>
+      <li>
+        <b> Observer: </b
+        ><i>A way of notifying change to a number of classes </i>
+      </li>
+      <li>
+        <b> State: </b><i>Alter an object's behavior when its state changes </i>
+      </li>
+      <li>
+        <b> Strategy: </b><i>Encapsulates an algorithm inside a class </i>
+      </li>
+      <li>
+        <b> Template method: </b>
         <i>Defer the exact steps of an algorithm to a subclass </i>
       </li>
       <li>
-        Visitor: <i>Defines a new operation to a class without change </i>
+        <b> Visitor: </b
+        ><i>Defines a new operation to a class without change </i>
       </li>
     </ul>
   </li>
