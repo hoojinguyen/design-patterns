@@ -17,7 +17,7 @@
    - [Builder](https://refactoring.guru/design-patterns/builder 'Named link title')
    - [Prototype](https://refactoring.guru/design-patterns/prototype 'Named link title')
    - [Singleton](https://refactoring.guru/design-patterns/singleton 'Named link title')
-2. <b>Structural: </b>explain how to assemble objects and class- es into larger structures, while keeping the structures flexible and efficient.
+2. <b>Structural: </b>explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
    - [Adapter](https://refactoring.guru/design-patterns/adapter 'Named link title')
    - [Bridge](https://refactoring.guru/design-patterns/ 'Named link title')
    - [Composite](https://refactoring.guru/design-patterns/composite 'Named link title')
