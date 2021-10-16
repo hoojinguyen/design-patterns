@@ -11,126 +11,31 @@
 
 <h2>Types of Design Patterns</h2>
 
-<ul>
-  <li>
-    <b>Creational: </b>provide object creation mechanisms that increase flexibility and reuse of existing code.
-    <ul>
-      <li>
-        <b> Factory method: </b>
-        <i>Creates an instance of several families of classes </i>
-      </li>
-      <li>
-        <b> Abstract Factory: </b>
-        <i>Separates object construction from its representation </i>
-      </li>
-      <li>
-        <b> Builder: </b>
-        <i>Creates an instance of several derived classes </i>
-      </li>
-      <li>
-        <b> Prototype: </b>
-        <i
-          >Avoid expensive acquisition and release of resources by recycling
-          objects that are no longer in use
-        </i>
-      </li>
-      <li>
-        <b> Singleton: </b>
-        <i>A fully initialized instance to be copied or cloned </i>
-      </li>
-      <li>
-        <b> Object Pool: </b>
-        <i>A class of which only a single instance can exist </i>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <b>Structural: </b>
-    explain how to assemble objects and class- es into larger structures,
-      while keeping the structures flexible and efficient.
-    <ul>
-      <li>
-        <b> Adapter: </b>
-        <i>Match interfaces of different classes </i>
-      </li>
-      <li>
-        <b> Bridge: </b>
-        <i>Separates an object's interface from its implementation </i>
-      </li>
-      <li>
-        <b> Composite: </b>
-        <i>A tree structure of simple and composite objects </i>
-      </li>
-      <li>
-        <b> Decorator: </b>
-        <i>Add responsibilities to objects dynamically </i>
-      </li>
-      <li>
-        <b> Facade: </b
-        ><i>A single class that represents an entire subsystem </i>
-      </li>
-      <li>
-        <b> Flyweight: </b
-        ><i>A fine-grained instance used for efficient sharing </i>
-      </li>
-      <li>
-        <b> Private Class Data: </b><i>Restricts accessor/mutator access </i>
-      </li>
-      <li><b> Proxy: </b><i>An object representing another object </i></li>
-    </ul>
-  </li>
-  <li>
-    <b>Behavioral: </b>:
-    take care of effective communication and the assignment of
-      responsibilities between objects.
-    <ul>
-      <li>
-        <b> Chain of responsibility : </b>
-        <i>A way of passing a request between a chain of objects</i>
-      </li>
-      <li>
-        <b> Command: </b><i>Encapsulate a command request as an object</i>
-      </li>
-      <li>
-        <b> Interpreter: </b
-        ><i>A way to include language elements in a program</i>
-      </li>
-      <li>
-        <b> Iterator: </b
-        ><i>Sequentially access the elements of a collection </i>
-      </li>
-      <li>
-        <b> Mediator: </b
-        ><i>Defines simplified communication between classes </i>
-      </li>
-      <li>
-        <b> Memento: </b><i>Capture and restore an object's internal state </i>
-      </li>
-      <li>
-        <b> Null Object: </b>
-        <i>Designed to act as a default value of an object </i>
-      </li>
-      <li>
-        <b> Observer: </b
-        ><i>A way of notifying change to a number of classes </i>
-      </li>
-      <li>
-        <b> State: </b><i>Alter an object's behavior when its state changes </i>
-      </li>
-      <li>
-        <b> Strategy: </b><i>Encapsulates an algorithm inside a class </i>
-      </li>
-      <li>
-        <b> Template method: </b>
-        <i>Defer the exact steps of an algorithm to a subclass </i>
-      </li>
-      <li>
-        <b> Visitor: </b
-        ><i>Defines a new operation to a class without change </i>
-      </li>
-    </ul>
-  </li>
-</ul>
+1. <b>Creational: </b>provide object creation mechanisms that increase flexibility and reuse of existing code.
+   - [Factory Method](https://refactoring.guru/design-patterns/factory-method 'Named link title')
+   - [Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory 'Named link title')
+   - [Builder](https://refactoring.guru/design-patterns/builder 'Named link title')
+   - [Prototype](https://refactoring.guru/design-patterns/prototype 'Named link title')
+   - [Singleton](https://refactoring.guru/design-patterns/singleton 'Named link title')
+2. <b>Structural: </b>explain how to assemble objects and class- es into larger structures, while keeping the structures flexible and efficient.
+   - [Adapter](https://refactoring.guru/design-patterns/adapter 'Named link title')
+   - [Bridge](https://refactoring.guru/design-patterns/ 'Named link title')
+   - [Composite](https://refactoring.guru/design-patterns/composite 'Named link title')
+   - [Decorator](https://refactoring.guru/design-patterns/decorator 'Named link title')
+   - [Facade](https://refactoring.guru/design-patterns/facade 'Named link title')
+   - [Flyweight](https://refactoring.guru/design-patterns/flyweight 'Named link title')
+   - [Proxy](https://refactoring.guru/design-patterns/proxy 'Named link title')
+3. <b>Behavioral: </b>take care of effective communication and the assignment of responsibilities between objects.
+   - [Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility 'Named link title')
+   - [Command](https://refactoring.guru/design-patterns/command 'Named link title')
+   - [Iterator](https://refactoring.guru/design-patterns/iterator 'Named link title')
+   - [Mediator](https://refactoring.guru/design-patterns/mediator 'Named link title')
+   - [Memento](https://refactoring.guru/design-patterns/memento 'Named link title')
+   - [Observer](https://refactoring.guru/design-patterns/observer 'Named link title')
+   - [State](https://refactoring.guru/design-patterns/state 'Named link title')
+   - [Strategy](https://refactoring.guru/design-patterns/strategy 'Named link title')
+   - [Template Method](https://refactoring.guru/design-patterns/template-method 'Named link title')
+   - [Visitor](https://refactoring.guru/design-patterns/visitor 'Named link title')
 
 <h2>Reference</h2>
 
