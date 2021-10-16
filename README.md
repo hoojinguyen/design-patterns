@@ -13,11 +13,7 @@
 
 <ul>
   <li>
-    <b>Creational</b>:
-    <i
-      >provide object creation mechanisms that increase flexibility and reuse of
-      existing code.</i
-    >
+    <b>Creational: </b>provide object creation mechanisms that increase flexibility and reuse of existing code.
     <ul>
       <li>
         <b> Factory method: </b>
@@ -49,11 +45,9 @@
     </ul>
   </li>
   <li>
-    <b>Structural</b>:
-    <i
-      >explain how to assemble objects and class- es into larger structures,
-      while keeping the structures flexible and efficient.</i
-    >
+    <b>Structural: </b>
+    explain how to assemble objects and class- es into larger structures,
+      while keeping the structures flexible and efficient.
     <ul>
       <li>
         <b> Adapter: </b>
@@ -86,11 +80,9 @@
     </ul>
   </li>
   <li>
-    <b>Behavioral</b>:
-    <i
-      >take care of effective communication and the assignment of
-      responsibilities between objects.</i
-    >
+    <b>Behavioral: </b>:
+    take care of effective communication and the assignment of
+      responsibilities between objects.
     <ul>
       <li>
         <b> Chain of responsibility : </b>
