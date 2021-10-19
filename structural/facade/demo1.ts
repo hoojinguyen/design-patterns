@@ -1,68 +1,95 @@
 namespace FacadePattern {
   /**
-   * The Target defines the domain-specific interface used by the client code.
+   * The Facade class provides a simple interface to the complex logic of one or
+   * several subsystems. The Facade delegates the client requests to the
+   * appropriate objects within the subsystem. The Facade is also responsible for
+   * managing their lifecycle. All of this shields the client from the undesired
+   * complexity of the subsystem.
    */
-  class Target {
-    public request(): string {
-      return "Target: The default target's behavior.";
+  class Facade {
+    protected subsystem1: Subsystem1;
+
+    protected subsystem2: Subsystem2;
+
+    /**
+     * Depending on your application's needs, you can provide the Facade with
+     * existing subsystem objects or force the Facade to create them on its own.
+     */
+    constructor(subsystem1: Subsystem1 = null, subsystem2: Subsystem2 = null) {
+      this.subsystem1 = subsystem1 || new Subsystem1();
+      this.subsystem2 = subsystem2 || new Subsystem2();
+    }
+
+    /**
+     * The Facade's methods are convenient shortcuts to the sophisticated
+     * functionality of the subsystems. However, clients get only to a fraction
+     * of a subsystem's capabilities.
+     */
+    public operation(): string {
+      let result = 'Facade initializes subsystems:\n';
+      result += this.subsystem1.operation1();
+      result += this.subsystem2.operation1();
+      result += 'Facade orders subsystems to perform the action:\n';
+      result += this.subsystem1.operationN();
+      result += this.subsystem2.operationZ();
+
+      return result;
     }
   }
 
   /**
-   * The Adaptee contains some useful behavior, but its interface is incompatible
-   * with the existing client code. The Adaptee needs some adaptation before the
-   * client code can use it.
+   * The Subsystem can accept requests either from the facade or client directly.
+   * In any case, to the Subsystem, the Facade is yet another client, and it's not
+   * a part of the Subsystem.
    */
-  class Adaptee {
-    public specificRequest(): string {
-      return '.eetpadA eht fo roivaheb laicepS';
+  class Subsystem1 {
+    public operation1(): string {
+      return 'Subsystem1: Ready!\n';
+    }
+
+    // ...
+
+    public operationN(): string {
+      return 'Subsystem1: Go!\n';
     }
   }
 
   /**
-   * The Adapter makes the Adaptee's interface compatible with the Target's
-   * interface.
+   * Some facades can work with multiple subsystems at the same time.
    */
-  class Adapter extends Target {
-    private adaptee: Adaptee;
-
-    constructor(adaptee: Adaptee) {
-      super();
-      this.adaptee = adaptee;
+  class Subsystem2 {
+    public operation1(): string {
+      return 'Subsystem2: Get ready!\n';
     }
 
-    public request(): string {
-      const result = this.adaptee
-        .specificRequest()
-        .split('')
-        .reverse()
-        .join('');
-      return `Adapter: (TRANSLATED) ${result}`;
+    // ...
+
+    public operationZ(): string {
+      return 'Subsystem2: Fire!';
     }
   }
 
   /**
-   * The client code supports all classes that follow the Target interface.
+   * The client code works with complex subsystems through a simple interface
+   * provided by the Facade. When a facade manages the lifecycle of the subsystem,
+   * the client might not even know about the existence of the subsystem. This
+   * approach lets you keep the complexity under control.
    */
-  function clientCode(target: Target) {
-    console.log(target.request());
+  function clientCode(facade: Facade) {
+    // ...
+
+    console.log(facade.operation());
+
+    // ...
   }
 
-  console.log('Client: I can work just fine with the Target objects:');
-  const target = new Target();
-  clientCode(target);
-
-  console.log('');
-
-  const adaptee = new Adaptee();
-  console.log(
-    "Client: The Adaptee class has a weird interface. See, I don't understand it:"
-  );
-  console.log(`Adaptee: ${adaptee.specificRequest()}`);
-
-  console.log('');
-
-  console.log('Client: But I can work with it via the Adapter:');
-  const adapter = new Adapter(adaptee);
-  clientCode(adapter);
+  /**
+   * The client code may have some of the subsystem's objects already created. In
+   * this case, it might be worthwhile to initialize the Facade with these objects
+   * instead of letting the Facade create new instances.
+   */
+  const subsystem1 = new Subsystem1();
+  const subsystem2 = new Subsystem2();
+  const facade = new Facade(subsystem1, subsystem2);
+  clientCode(facade);
 }
