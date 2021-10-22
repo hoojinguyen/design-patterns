@@ -1,4 +1,4 @@
-namespace DecoratorPatter {
+namespace DecoratorPattern {
   interface EmployeeComponent {
     getName: () => string;
     doTask: () => void;
